@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- libreria bootstrap++  -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://cdn.rawgit.com/arafkarim/BootstrapPlusPlus/2d8d0b9d/bpp/bpp.min.css">
+
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"></script>
+        <!-- fin bootstrap -->
+    </head>
+    <body>
+        <div class="jumbotron jumbotron-fluid">
+            <div class="container">
+              <h1 class="display-3">Información Casos GES año 2009 a 2017</h1>
+              <p class="lead">Información obtenida desde datos.gob.cl.</p>
+            </div>
+        </div>
+        <div class="container">
+            <!--Ingreso del año GES para promedio -->
+            <div class="col-md-12">                
+                <h3>Promedio Casos GES de Cancer por Año</h3>                
+                <div class="form-group">
+                <form method="get" action="consulta">
+                    <label><small>Ingrese año a consultar</small></label>
+                    <input type="number" name="ano_promedio" class="form-control" placeholder="Ingrese Año">
+                    <small class="form-text text-muted">Promedio Casos GES año seleccionado.</small>
+                    <button type="submit" class="btn btn-primary btn-rounded" name="mostrar_prom">Mostrar</button>
+                </form>
+                </div>                            
+            </div>     
+            <!--Ingreso del año GES para la suma -->
+            <div class="col-md-12">                
+                <h3>Total de casos GES por año</h3>                
+                <div class="form-group">
+                    <form method="get" action="consulta">
+                        <label><small>Ingrese año a consultar</small></label>
+                        <input type="number" name="ano_suma" class="form-control" placeholder="Ingrese Año">
+                        <small class="form-text text-muted">Total de Casos GES del año seleccionado.</small>
+                        <button type="submit" class="btn btn-primary btn-rounded" name="mostrar_suma">Mostrar</button>
+                    </form>
+                </div>                               
+            </div>
+            <!--Botón consulta tabla -->
+            <div class="col-md-12">
+                <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3>Tabla de Datos</h3>
+                </div>
+                <div class="panel-body">
+                    <form method="get" action="consulta">
+                    <button type="submit" class="btn btn-primary btn-rounded" name="mostrar_tabla">Mostrar</button>                    
+                    </form>
+                </div>
+                </div> 
+                
+            </div>
+            
+        </div>
+    </body>
+</html>
